@@ -1,0 +1,16 @@
+server:
+  port: 9095
+dubbo:
+  application:
+    name: qf-v3-user-web
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+spring:
+  redis:
+    host: 192.168.139.130
+    password: chen
+    jedis:
+      pool:
+        max-active: 100
+    port: 6379

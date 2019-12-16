@@ -1,0 +1,25 @@
+server:
+  port: 8082
+spring:
+  data:
+    solr:
+      host: http://127.0.0.1:8888/solr/core1
+  datasource:
+    url: jdbc:mysql://localhost:3306/qf_db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: chen
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /test
+
+dubbo:
+  application:
+    name: search-service-provider
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    port: 28002

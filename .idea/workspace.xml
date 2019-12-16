@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="744296f5-654c-4eff-9173-c6ed8f67d393" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="qf_db@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="qf_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="qf_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="qf_db: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="qf-v3" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Maven\repository" />
+        <option name="mavenHome" value="D:/Maven/apache-maven-3.6.2" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1RMxwQ9aEzZ49m9FIzaEjayaZD4" />
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="ToolWindowFindBugs-IDEA.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/qf-v3-basic/qf-v3-mapper/src/test/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shiro_urp-master" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.12367493" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\qf-v3\qf-v3-api\qf-v3-cart-api\target" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\qf-v3\qf-v3-web\qf-v3-product-web\src\main\resources\static\photo" />
+      <recent name="D:\Projects\qf-v3\qf-v3-api\qf-v3-cart-api\src\main\java" />
+      <recent name="D:\Projects\qf-v3\qf-v3-api" />
+      <recent name="D:\Projects\qf-v3\qf-v3-api\qf-v3-cart-api\target" />
+      <recent name="D:\Projects\qf-v3\qf-v3-api\qf-v3-cart-api" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qf.v3.entity" />
+      <recent name="com.qf.v3.mapper" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.qf.v3.mapper" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.QfV3ProductIndexApplication">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="qf-v3-product" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="qf-v3-product" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3CartServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-cart-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3cartservice.QfV3CartServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3CartWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-cart-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3cartweb.QfV3CartWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3ItemServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-item-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3itemservice.QfV3ItemServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3MailServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-mail-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3mailservice.QfV3MailServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3ProductIndexApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-product-index" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3productindex.QfV3ProductIndexApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3ProductSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-product-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3productsearch.QfV3ProductSearchApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-product-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3productservice.QfV3ProductServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3ProductWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-product-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qf.qfv3productweb.QfV3ProductWebApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3SearchServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-search-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3searchservice.QfV3SearchServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3userservice.QfV3UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QfV3UserWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qf-v3-user-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qianfeng.qfv3userweb.QfV3UserWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.QfV3ProductServiceApplication" />
+      <item itemvalue="Spring Boot.QfV3ProductWebApplication" />
+      <item itemvalue="Spring Boot.QfV3ProductIndexApplication" />
+      <item itemvalue="Spring Boot.QfV3ProductSearchApplication" />
+      <item itemvalue="Spring Boot.QfV3SearchServiceApplication" />
+      <item itemvalue="Spring Boot.QfV3ItemServiceApplication" />
+      <item itemvalue="Spring Boot.QfV3MailServiceApplication" />
+      <item itemvalue="Spring Boot.QfV3UserServiceApplication" />
+      <item itemvalue="Spring Boot.QfV3UserWebApplication" />
+      <item itemvalue="Spring Boot.QfV3CartServiceApplication" />
+      <item itemvalue="Spring Boot.QfV3CartWebApplication" />
+    </list>
+  </component>
+  <component name="SQLPlugin.ProjectConfiguration">
+    <queries />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <option name="contentProportion" value="0.24043716" />
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@edb0f44e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@edb0f44e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@82999e30" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="744296f5-654c-4eff-9173-c6ed8f67d393" name="Default Changelist" comment="" />
+      <created>1569491003566</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569491003566</updated>
+      <workItem from="1569491006060" duration="969000" />
+      <workItem from="1569497850079" duration="2273000" />
+      <workItem from="1569544854136" duration="1801000" />
+      <workItem from="1569567080036" duration="16000" />
+      <workItem from="1569720549538" duration="10950000" />
+      <workItem from="1569750512097" duration="8000" />
+      <workItem from="1569756973921" duration="989000" />
+      <workItem from="1569758371701" duration="6528000" />
+      <workItem from="1569764963539" duration="4074000" />
+      <workItem from="1569769120292" duration="133000" />
+      <workItem from="1569804237111" duration="14636000" />
+      <workItem from="1570541201055" duration="206000" />
+      <workItem from="1570541430841" duration="910000" />
+      <workItem from="1570542361250" duration="94000" />
+      <workItem from="1570542476746" duration="288000" />
+      <workItem from="1570542786052" duration="1198000" />
+      <workItem from="1570584732410" duration="3262000" />
+      <workItem from="1570591222978" duration="575000" />
+      <workItem from="1570591821945" duration="16584000" />
+      <workItem from="1570623902683" duration="6350000" />
+      <workItem from="1570671531135" duration="9995000" />
+      <workItem from="1570684744364" duration="10394000" />
+      <workItem from="1570777360111" duration="25381000" />
+      <workItem from="1570844317862" duration="8245000" />
+      <workItem from="1570874822209" duration="1797000" />
+      <workItem from="1570876735986" duration="1316000" />
+      <workItem from="1570878134882" duration="2210000" />
+      <workItem from="1570881168973" duration="1492000" />
+      <workItem from="1570882687926" duration="74000" />
+      <workItem from="1570882783226" duration="3290000" />
+      <workItem from="1570894310886" duration="238000" />
+      <workItem from="1570894623409" duration="369000" />
+      <workItem from="1571021129421" duration="22974000" />
+      <workItem from="1571056060109" duration="5943000" />
+      <workItem from="1571107390191" duration="7841000" />
+      <workItem from="1571119020384" duration="5561000" />
+      <workItem from="1571126641527" duration="21351000" />
+      <workItem from="1571188637437" duration="15633000" />
+      <workItem from="1571229327763" duration="718000" />
+      <workItem from="1571230084216" duration="1609000" />
+      <workItem from="1571281081570" duration="96000" />
+      <workItem from="1571366924171" duration="5286000" />
+      <workItem from="1571379430498" duration="14182000" />
+      <workItem from="1571405776123" duration="2985000" />
+      <workItem from="1571475714310" duration="11501000" />
+      <workItem from="1571626238971" duration="7854000" />
+      <workItem from="1571713107243" duration="802000" />
+      <workItem from="1571725821938" duration="12659000" />
+      <workItem from="1571746762217" duration="7000" />
+      <workItem from="1571746810532" duration="323000" />
+      <workItem from="1571747162644" duration="509000" />
+      <workItem from="1571747702020" duration="679000" />
+      <workItem from="1571748554377" duration="9042000" />
+      <workItem from="1571758921325" duration="79000" />
+      <workItem from="1571838557945" duration="5131000" />
+      <workItem from="1571888938437" duration="14039000" />
+      <workItem from="1572077300916" duration="54000" />
+      <workItem from="1572077382489" duration="720000" />
+      <workItem from="1572229950990" duration="8579000" />
+      <workItem from="1572256266876" duration="10598000" />
+      <workItem from="1572317486832" duration="17082000" />
+      <workItem from="1572339734838" duration="2559000" />
+      <workItem from="1572342327946" duration="216000" />
+      <workItem from="1572344726502" duration="20000" />
+      <workItem from="1572345103351" duration="53000" />
+      <workItem from="1572345178434" duration="90000" />
+      <workItem from="1572345290539" duration="49000" />
+      <workItem from="1572345358932" duration="7219000" />
+      <workItem from="1572352624948" duration="1282000" />
+      <workItem from="1572353940433" duration="3147000" />
+      <workItem from="1572398450636" duration="3896000" />
+      <workItem from="1572432724571" duration="2850000" />
+      <workItem from="1572435605100" duration="324000" />
+      <workItem from="1572435954469" duration="8148000" />
+      <workItem from="1572490054873" duration="15997000" />
+      <workItem from="1572598276649" duration="110000" />
+      <workItem from="1572598480552" duration="3675000" />
+      <workItem from="1572676884600" duration="235000" />
+      <workItem from="1572679272129" duration="6312000" />
+      <workItem from="1572834213771" duration="101000" />
+      <workItem from="1572834333173" duration="6542000" />
+      <workItem from="1572847003561" duration="2473000" />
+      <workItem from="1572852936061" duration="3443000" />
+      <workItem from="1572871209037" duration="21000" />
+      <workItem from="1572944280531" duration="60000" />
+      <workItem from="1572947006194" duration="5658000" />
+      <workItem from="1573090720767" duration="1419000" />
+      <workItem from="1573127391204" duration="7717000" />
+      <workItem from="1573181984623" duration="29000" />
+      <workItem from="1573725649884" duration="633000" />
+      <workItem from="1573736455344" duration="159000" />
+      <workItem from="1573736720126" duration="615000" />
+      <workItem from="1574304971798" duration="234000" />
+      <workItem from="1574305610088" duration="1512000" />
+      <workItem from="1574388305329" duration="79000" />
+      <workItem from="1574842527624" duration="1958000" />
+      <workItem from="1574898618255" duration="15000" />
+      <workItem from="1574927899172" duration="7596000" />
+      <workItem from="1575281501174" duration="38000" />
+      <workItem from="1575283128340" duration="620000" />
+      <workItem from="1575385175539" duration="768000" />
+      <workItem from="1575386762325" duration="111000" />
+      <workItem from="1575387168035" duration="862000" />
+      <workItem from="1575388148699" duration="609000" />
+      <workItem from="1575714081019" duration="24000" />
+      <workItem from="1575716242013" duration="343000" />
+      <workItem from="1575719191689" duration="12000" />
+      <workItem from="1575719447254" duration="378000" />
+      <workItem from="1575745927937" duration="765000" />
+      <workItem from="1575746780540" duration="22000" />
+      <workItem from="1575892738185" duration="1517000" />
+      <workItem from="1575895427255" duration="1197000" />
+      <workItem from="1575915020217" duration="17000" />
+      <workItem from="1575916471608" duration="175000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

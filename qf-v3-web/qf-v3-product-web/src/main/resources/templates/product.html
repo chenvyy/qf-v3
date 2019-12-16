@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>商品信息</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/path/to/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/path/to/dist/css/bootstrapValidator.min.css"/>
+
+    <script type="text/javascript" src="/path/to/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/path/to/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 使用压缩过的版本-->
+    <script type="text/javascript" src="/path/to/dist/js/bootstrapValidator.min.js"></script>
+    <!-- 使用包含所有验证器的未压缩版本 -->
+    <script type="text/javascript" src="/path/to/dist/js/bootstrapValidator.js"></script>
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body background="/photo/bkg.jpg">
+<div style="text-align: center">
+
+    <h3 style="color: yellow">商品后台管理</h3>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <div class="row" style="margin: 10px;margin-top: 20px">
+        <div class="col-md-10"></div>
+        <div class="col-md-2">
+            <button type="button" style="margin-right: 8px" class="btn btn-warning" data-toggle="modal" id="toAdd"
+                    title="选择添加商品">添加
+            </button>&nbsp;
+            <input type="checkbox" id="selectAll" title="全选"/>
+            <button type="button" class="btn btn-danger"
+                    id="delBatch" style="margin-left: 10px" data-toggle="tooltip" data-placement="top" title="选择批量删除商品"
+            >批量删除
+            </button>
+        </div>
+    </div>
+    <div class="panel panel-primary" style="margin: 20px">
+        <table class="table table-hover table-bordered table-striped">
+            <tr style="background: deepskyblue;height: 50px;color: white" align="middle">
+                <td>ID</td>
+                <td>名称</td>
+                <td>图片</td>
+                <td>原价</td>
+                <td>卖价</td>
+                <td>类型</td>
+                <td>卖点</td>
+                <td>
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 3px">
+                    <span class="glyphicon glyphicon-check" aria-hidden="true" style="margin-left: 18px">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-left: 14px">
+
+                </span></td>
+            </tr>
+            <tr th:each="pro:${lists}" align="center" class="warning" style="color:crimson">
+
+                <td th:text="${pro.id}">1</td>
+                <td th:text="${pro.name}">苹果XSMAX</td>
+                <td><img width="80px" height="80px" th:src="${pro.image}"></td>
+                <td th:text="${pro.price}">8499</td>
+                <td th:text="${pro.salePrice}">8299</td>
+                <td th:text="${pro.typeName}">数码</td>
+                <td th:text="${pro.salePoint}">最新一代苹果</td>
+                <td>
+                    <button type="button" style="margin-right: 8px" class="btn btn-success btn-sm"
+                            data-target=".bs-example-modal-lg" title="选择编辑商品"
+                            th:onclick="editProduct([[${pro}]])">编辑
+                    </button>&nbsp;
+                    <input name="delBox" th:value="${pro.id}" type="checkbox" title="选择">
+                    <button type="button" style="margin-left: 10px" class="btn btn-danger btn-sm" data-toggle="tooltip"
+                            title="选择删除商品"
+                            th:onclick="|delProduct(${pro.id})|">删除
+                        <!--                        <a th:href="|/product/del/${pageInfo.pageNum}/${pageInfo.pageSize}/${pro.id}|">-->
+                        <!--                            <span aria-hidden="true" style="color: ivory">删除</span>-->
+                        <!--                        </a>-->
+                    </button>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 添加商品 -->
+    <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加商品</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="addProductForm" onsubmit="return check()"
+                          method="post" action="/product/add" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">商品名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" name="tProduct.name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="typeId" class="col-sm-2 control-label">所属分类</label>
+                            <div class="col-sm-10">
+                                <select id="typeId" class="form-control" name="tProduct.typeId">
+                                    <option value="1">手机数码</option>
+                                    <option value="2">家用电器</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="images" class="col-sm-2 control-label">商品图片</label>
+                            <div class="col-sm-10">
+                                <input type="file" id="images" name="file">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price" class="col-sm-2 control-label">商品价格</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="price" name="tProduct.price">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="salePrice" class="col-sm-2 control-label">实售价格</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="salePrice" name="tProduct.salePrice">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="salePoint" class="col-sm-2 control-label">商品卖点</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="salePoint" name="tProduct.salePoint">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productDesc" class="col-sm-2 control-label">商品描述</label>
+                            <div class="col-sm-10">
+                                <textarea id="productDesc" name="productDesc" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="productFormSubmitBtn">添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--修改商品-->
+    <div class="modal fade " id="myModal1" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="updateModalLabel">修改商品</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="editProductForm"
+                          method="post" action="/product/edit" enctype="multipart/form-data">
+                        <input type="hidden" id="editId" name="tProduct.id">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label">商品名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="editName" name="tProduct.name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="typeId" class="col-sm-2 control-label">所属分类</label>
+                            <div class="col-sm-10">
+                                <select id="updateId" class="form-control" name="tProduct.typeId">
+                                    <option value="1">手机数码</option>
+                                    <option value="2">家用电器</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="images" class="col-sm-2 control-label">商品图片</label>
+                            <div class="col-sm-10">
+                                <input type="file" id="editImages" name="editFile">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price" class="col-sm-2 control-label">商品价格</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="editPrice" name="tProduct.price">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="salePrice" class="col-sm-2 control-label">实售价格</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="editSalePrice" name="tProduct.salePrice">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="salePoint" class="col-sm-2 control-label">商品卖点</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="editSalePoint" name="tProduct.salePoint">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productDesc" class="col-sm-2 control-label">商品描述</label>
+                            <div class="col-sm-10">
+                                <textarea id="editProductDesc" name="productDesc" class="form-control"
+                                          rows="3"></textarea>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="updateFormSubmitBtn">修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        // <!--修改商品-->
+        function editProduct(pro) {
+            var edit = $("#myModal1");
+            edit.modal({
+                "backdrop": "static",
+                "keyboard": false
+            });
+            edit.find("#editName").val(pro.name);
+            edit.find("#editId").val(pro.id);
+            edit.find("#updateId").val(pro.typeId);
+            edit.find("#editPrice").val(pro.price);
+            edit.find("#editSalePrice").val(pro.salePrice);
+            edit.find("#editSalePoint").val(pro.salePoint);
+            edit.find("#editProductDesc").val(pro.productDesc);
+        }
+
+        $("#updateFormSubmitBtn").click(function () {
+            $("#editProductForm").submit()
+        })
+
+        // <!--添加商品-->
+        $(function () {
+            $("#toAdd").click(function () {
+                $("#myModal").modal({
+                    "backdrop": "static",
+                    "keyboard": false
+                })
+            })
+        })
+        $("#productFormSubmitBtn").click(function () {
+            $("#addProductForm").submit()
+        })
+
+        function check() {
+            var inputid = document.getElementById("name").value;
+            if (inputid) {
+                return true;
+            } else {
+                alert("请输入商品名称");
+                inputid.focus();
+                return false;
+            }
+
+        }
+
+        //删除商品
+        function delProduct(id) {
+            var d = confirm("是否确定删除商品?");
+            if (d == true) {
+                $.ajax({
+                    url: "/product/del",// 请求数据服务器地址，只能是当前项目，JSONP才能访问外网（需要服务器配合才能用）
+                    //contentType: "application/x-www-form-urlencoded",// 默认就是表单数据(不写)，如果此时要传递的是json字符串，
+                    // 那么此时就用application/json,如果此时要传递图片"multipart/form-data，还有数组，集合，还有对象，那么contentType必须指定为false
+                    data: {"id": id},// 要上传的参数
+                    //dataType: 'Json',// 服务器响应数据：json,text,html,xml
+                    error: function () {//请求错误的时候，会触发此函数
+                        alert("商品删除失败！")
+                    },
+                    processData: true,//布尔值,一般都不用设置，规定通过请求发送的数据是否转换为查询字符串。默认是 true。如果此时上传的时候，有图片，这里必须设置false,
+                    success: function (data) {// 请求成功，回调函数,data，指的就是服务器返回的数据
+                        // alert("商品删除成功！");
+                        window.location.reload()
+                    },
+                    type: 'GET',// ajax请求的方式，post或get
+                });
+            }
+        };
+
+        //批量删除
+        window.onload = function () {
+            var selectAll = document.getElementById("selectAll");
+            var box = document.getElementsByName("delBox");
+            selectAll.onclick = function () {
+                for (var i = 0; i < box.length; i++) {
+                    box[i].checked = this.checked;
+                }
+            };
+
+            for (var i = 0; i < box.length; i++) {
+                box[i].onclick = function () {
+                    selectAll.checked = true;
+                    for (var j = 0; j < box.length; j++) {
+                        if (!box[j].checked) {
+                            selectAll.checked = false;
+                            break;
+                        }
+                    }
+                }
+            }
+            ;
+
+            document.getElementById("delBatch").onclick = function () {
+                var ids = "";
+                for (var j = 0; j < box.length; j++) {
+                    if (box[j].checked) {
+                        ids += "," + box[j].value;
+                    }
+                }
+                if (!ids) {
+                    alert("请选择要删除的商品!");
+                    return;
+                }
+                if (confirm("确定删除选中的商品吗？")) {
+                    ids = ids.substring(1);
+                    // location = "${pageContext.request.contextPath}/store?method=delBatch&ids="
+                    //     + ids;
+                    $.ajax({
+                        url: "/product/delAll",// 请求数据服务器地址，只能是当前项目，JSONP才能访问外网（需要服务器配合才能用）
+                        //contentType: "application/x-www-form-urlencoded",// 默认就是表单数据(不写)，如果此时要传递的是json字符串，
+                        // 那么此时就用application/json,如果此时要传递图片"multipart/form-data，还有数组，集合，还有对象，那么contentType必须指定为false
+                        data: {"ids": ids},// 要上传的参数
+                        //dataType: 'Json',// 服务器响应数据：json,text,html,xml
+                        error: function () {//请求错误的时候，会触发此函数
+                            alert("商品批量删除失败！")
+                        },
+                        processData: true,//布尔值,一般都不用设置，规定通过请求发送的数据是否转换为查询字符串。默认是 true。如果此时上传的时候，有图片，这里必须设置false,
+                        success: function (data) {// 请求成功，回调函数,data，指的就是服务器返回的数据
+                            // alert("商品批量删除成功！");
+                            window.location.reload()
+                        },
+                        type: 'GET',// ajax请求的方式，post或get
+                    });
+                }
+            };
+        }
+
+    </script>
+    <div class="row">
+        <!--分页-->
+        <div class="col-md-12" style="color: darkviolet">
+            当前第<span th:text="${pageInfo.pageNum}" style="color: yellow"></span>页，
+            共有<span th:text="${pageInfo.total}" style="color: yellow"></span>条记录，
+            共有<span th:text="${pageInfo.pages}" style="color: yellow"></span>页
+        </div>
+        <!--分页按钮-->
+        <div class="col-md-12">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li th:class="${pageInfo.pageNum==1?'disabled':''}">
+                        <a href="#" aria-label="Previous" th:if="${pageInfo.pageNum>1}"
+                           th:href="|/product/page/${pageInfo.pageNum-1}/${pageInfo.pageSize}|" title="上一页">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+
+                        <a href="#" aria-label="Previous" th:if="${pageInfo.pageNum<=1}"
+                           th:href="|/product/page/1/${pageInfo.pageSize}|">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+
+                    <li th:class="${num==pageInfo.pageNum?'active':''}" th:each="num:${pageInfo.navigatepageNums}">
+                        <a href="#" th:href="|/product/page/${num}/${pageInfo.pageSize}|">
+                            <span th:text="${num}"></span>
+                        </a>
+                    </li>
+
+                    <li th:class="${pageInfo.pageNum==pageInfo.pages?'disabled':''}">
+                        <a href="#" aria-label="Next" th:if="${pageInfo.pageNum<pageInfo.pages}"
+                           th:href="|/product/page/${pageInfo.pageNum+1}/${pageInfo.pageSize}|" title="下一页">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+
+                        <a href="#" aria-label="Next" th:if="${pageInfo.pageNum>=pageInfo.pages}"
+                           th:href="|/product/page/${pageInfo.pages}/${pageInfo.pageSize}|"
+                        >
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="qf-v3-user-api" />
+        <module name="qf-v3-mapper" />
+        <module name="qf-v3-product-search" />
+        <module name="qf-v3-mail-service" />
+        <module name="qf-v3-product-service" />
+        <module name="qf-v3-product-index" />
+        <module name="qf-v3-search-api" />
+        <module name="qf-v3-web" />
+        <module name="qf-v3-common" />
+        <module name="qf-v3-user-service" />
+        <module name="qf-v3-cart-service" />
+        <module name="qf-v3-cart-api" />
+        <module name="qf-v3-product-api" />
+        <module name="qf-v3-cart-web" />
+        <module name="qf-v3-user-web" />
+        <module name="qf-v3-item-api" />
+        <module name="qf-v3-search-service" />
+        <module name="qf-v3-product-web" />
+        <module name="qf-v3-mail-api" />
+        <module name="qf-v3-service" />
+        <module name="qf-v3-entity" />
+        <module name="qf-v3-item-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="qf-v3-product" target="1.5" />
+      <module name="qfv3cartapi" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="qf-v3-cart-service" options="-parameters" />
+      <module name="qf-v3-cart-web" options="-parameters" />
+      <module name="qf-v3-item-service" options="-parameters" />
+      <module name="qf-v3-mail-service" options="-parameters" />
+      <module name="qf-v3-mapper" options="-parameters" />
+      <module name="qf-v3-product-index" options="-parameters" />
+      <module name="qf-v3-product-search" options="-parameters" />
+      <module name="qf-v3-product-service" options="-parameters" />
+      <module name="qf-v3-product-web" options="-parameters" />
+      <module name="qf-v3-search-service" options="-parameters" />
+      <module name="qf-v3-user-service" options="-parameters" />
+      <module name="qf-v3-user-web" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+server:
+  port: 9096
+dubbo:
+  application:
+    name: qf-v3-cart
+  registry:
+    address: zookeeper://127.0.0.1:2181
+

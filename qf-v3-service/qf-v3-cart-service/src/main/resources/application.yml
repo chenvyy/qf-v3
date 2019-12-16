@@ -1,0 +1,23 @@
+server:
+  port: 8086
+dubbo:
+  application:
+    name: qf-v3-cart-service
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+  protocol:
+    port: 28005
+spring:
+  redis:
+    host: 192.168.139.130
+    password: chen
+    jedis:
+      pool:
+        max-active: 100
+    port: 6379
+  datasource:
+    url: jdbc:mysql://localhost:3306/qf_db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: chen

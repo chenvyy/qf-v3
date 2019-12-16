@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-service/qf-v3-product-service/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-web/qf-v3-product-web/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-web/qf-v3-product-index/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-web/qf-v3-product-search/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-service/qf-v3-search-service/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-service/qf-v3-item-service/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-service/qf-v3-mail-service/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-service/qf-v3-user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-web/qf-v3-user-web/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-service/qf-v3-cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/qf-v3-web/qf-v3-cart-web/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/qf-v3-api/qf-v3-product/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/qf-v3-api/qf-v3-cart-api/target/out" />
+  </component>
+</project>

@@ -1,0 +1,20 @@
+server:
+  port: 8084
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /test
+
+  mail:
+    host: smtp.163.com
+    username: chenvyy@163.com
+    password: 0000buer
+    default-encoding: UTF-8
+
+From:
+  path: chenvyy@163.com
+To:
+  path: 996099145@qq.com
